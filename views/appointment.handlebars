@@ -1,0 +1,56 @@
+/////
+<div class="row">
+  <div class="col-auto">
+    <h2>APPOINTMENTS</h2>
+  </div>
+</div>
+
+ 
+ {{#if appointments.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current appointments:</h3>
+
+    {{#each appointments as |appointments|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{appointments.appointment_id}}">{{appointments.appointment_id}} {{appointments.appointmentName}}</a></h4>
+        <h4><a href="/project/{{appointments.visitReason}}">{{appointments.visitReason}}</a></h4>
+        <h4><a href="/project/{{appointments.appointmentName}}">{{appointments.appointmentName}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{appointments.appointment_id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+   <div class="col-md-6">
+    <h3>Set a new appointment:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="project-name">project name:</label>
+        <input class="form-input" type="text" id="appointment-name" name="appointment-name" />
+      </div>
+      <div class="form-group">
+        <label for="project-funding">Visit Reason:</label>
+        <input class="form-input" type="text" id="appointment-reason" name=" appointment-reason" />
+      </div>
+     <div class="form-group">
+        <label for="project-desc">day of appointment:</label>
+        <input class="form-input" type="date" type=id="appointment-day" name="appointment-day"/>
+        </div>
+    <div class="form-group">
+        <label for="project-desc">appointmnent time </label>
+        <input class="form-input" type="time" type=id="appointment-day" name="appointment-day"/>
+        </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+<script src="./js/profile.js"></script>
+

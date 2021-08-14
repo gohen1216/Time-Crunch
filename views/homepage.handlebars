@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome To Time Crunch, {{username}}!</h2>
+    <div>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="/user.handlebars">USER PROFILE </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/appointment">APPOINTMENTS </a>
+            </li>
+            {{#if logged_in}}
+                  <button class="no-button" id="logout">logout</button>
+            {{else}}
+                <a href="/login">login</a>
+            {{/if}}
+      </nav>
+
+        </ul>
+
+    </div>
+  
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+<script src="/js/logout.js"></script>
+
+
+
